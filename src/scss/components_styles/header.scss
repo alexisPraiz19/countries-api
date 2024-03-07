@@ -1,0 +1,32 @@
+.header{
+    padding: 20px 5%;
+    @include flex(0, space-between, normal);
+    
+    h1{
+        font-size: 2em;
+        font-weight: 800;
+    }
+
+    button{
+        @include flex(8px, normal, center);
+        span{ 
+            font-weight: 600;
+            letter-spacing: .5px; 
+        }
+    }
+}
+
+@media screen and (max-width: 440px){
+    .header{
+        h1{
+            font-size: 1.4em;
+            letter-spacing: .5px;
+        }
+
+        button{ font-size: 12px;  }
+    }
+}
+
+@media screen and (max-width: 330px){
+    .header h1{ font-size: 1.2em; }
+}

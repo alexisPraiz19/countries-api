@@ -1,0 +1,11 @@
+// Estilos Generales
+@import "./general_styles/variables.scss";
+@import "./general_styles/functions.scss";
+@import "./general_styles/deafult.scss";
+
+// Estilos para los componentes
+@import "./components_styles/header.scss";
+@import "./components_styles/main.scss";
+@import "./components_styles/hero.scss";
+@import "./components_styles/flags.scss";
+@import "./components_styles/flag_detail.scss";

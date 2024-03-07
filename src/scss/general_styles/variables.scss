@@ -1,0 +1,19 @@
+@mixin theme-color($dark-mode: true){
+    @if $dark-mode{
+        --bg-body-theme: hsl(207, 26%, 17%); // Dark Mode Background
+        --bg-elements-theme: hsl(209, 23%, 22%); // Dark Mode Elements
+        --texts-color: hsl(0, 0%, 100%); // Dark Mode Text
+        --bg-input-search: hsl(209, 23%, 22%); // Dark Mode Input
+        --bg-hover-list: #eee1; // Dark Mode List
+        --hover-flags: #BFFFA5;
+        --error-flag-title: #FF5A5A; 
+    }@else {
+        --bg-body-theme: hsl(0, 0%, 98%); // Light Mode Background
+        --bg-elements-theme: hsl(0, 0%, 100%); // Light Mode Elements
+        --texts-color: hsl(200, 15%, 8%); // Light Mode Text
+        --bg-input-search: hsl(0, 0%, 52%); // Light Mode Input
+        --bg-hover-list: #76767611; // Light Mode List
+        --hover-flags: #88B476;
+        --error-flag-title: #FF9186; 
+    }
+}

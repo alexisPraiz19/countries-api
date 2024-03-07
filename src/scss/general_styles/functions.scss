@@ -1,0 +1,23 @@
+@mixin transition($property, $time, $cubic){ transition: $property $time $cubic; }
+
+@mixin translateY($translate){ transform: translateY($translate); }
+
+@mixin border-radius($border){
+    border-radius: $border;
+}
+
+@mixin border-radius-specific($topLeft, $topRight, $bottomRight, $bottomLeft){
+    border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+}
+
+@mixin flex($gap, $justify, $align){
+    display: flex;
+    gap: $gap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($gap){
+    display: grid;
+    gap: $gap;
+}
