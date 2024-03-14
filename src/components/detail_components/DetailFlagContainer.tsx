@@ -11,16 +11,16 @@ import { Link } from "react-router-dom";
 // Componente principal de exportación
 export default function DetailFlagContainer():JSX.Element{
     // Las siguentes 3 líneas de código son para adquirir dinámicamente la bandera seleccionada a través de la URL
-    const { flags }     = useContext(RequestDataContext) as any;
-    const { flagname }  = useParams() as any;
-    const flag_selected = flags.find((flag:any) => flag.alpha3Code === flagname) as any;
+    const { auxiliaryFlags } = useContext(RequestDataContext) as any;
+    const { flagname }       = useParams() as any;
+    const flag_selected      = auxiliaryFlags.find((flag:any) => flag.alpha3Code === flagname) as any;
 
-    const borders_countries          = flag_selected.borders ? flag_selected.borders : [] as any;
+    const borders_countries          = flag_selected.borders ? flag_selected.borders : [] as any; 
     const validate_borders_countries = borders_countries.length == 0 ? "" : <span>Border Countries: </span> as any;
     
     return (
         <section className="detail-container text-color">
-            <Link to="/" className="btn-go-back text-color">
+            <Link to="/countries-api/" className="btn-go-back text-color">
                 <i className="fa-solid fa-arrow-left-long"></i>
                 Back
             </Link>
@@ -54,7 +54,7 @@ export default function DetailFlagContainer():JSX.Element{
                             {
                                 borders_countries.map((i:any)=> (
                                     <button key={ i } className="go-to bg-and-shadow">
-                                        <Link to={`/flag/${ i }`} className="border-link text-color">
+                                        <Link to={`/countries-api/${ i }`} className="border-link text-color">
                                           { i }
                                         </Link>
                                     </button>

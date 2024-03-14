@@ -87,6 +87,7 @@
     .detail-container .detail{
         flex-direction: column;
         gap: 50px;
+        padding-bottom: 20px;
 
         .flag-image{
             width: 70%; height: 280px;
@@ -127,7 +128,5 @@
         }
     }
 
-    .detail-container{
-        .btn-go-back{ width: 100px; margin-bottom: 40px; }
-    }
+    .detail-container .btn-go-back{ width: 100px; margin-bottom: 40px; }
 }

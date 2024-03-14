@@ -5,6 +5,7 @@
 
     .label-search{
         width: 400px; height: 100%;
+        margin-right: 10px;
         padding: 0 15px;
         @include flex(15px, normal, center);
         @include border-radius(5px);
@@ -71,5 +72,17 @@
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
             padding: 10px 0;
         }
+    }
+}
+
+@media screen and (max-width: 475px){
+    .hero{
+        height: auto;
+        flex-direction: column;
+        gap: 24px;
+
+        .label-search{ width: 100%; height: 46px;}
+
+        .filter-container{ height: 44px; }
     }
 }

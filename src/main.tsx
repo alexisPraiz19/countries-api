@@ -14,11 +14,11 @@ import RequestData from "./context/RequestData.tsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/countries-api/",
     element: <App/>
   },
   {
-    path: "/flag/:flagname",
+    path: "/countries-api/:flagname",
     element: <CountryDetail/>
   }
 ]);

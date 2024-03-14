@@ -12,7 +12,7 @@ import LazyLoad from "react-lazy-load";
 export default function Flags():JSX.Element{
     const { flags, setFlags, setAuxiliaryFlags } = useContext(RequestDataContext) as any;
 
-    useEffect(()=>{ fetch("/data.json").then(response => response.json()).then(response => { setFlags(response); setAuxiliaryFlags(response) }) },[]);
+    useEffect(()=>{ fetch("data.json").then(response => response.json()).then(response => { setFlags(response); setAuxiliaryFlags(response) }) },[]);
 
     useEffect(()=>{
         const container_flag  = document.querySelector(".container-flags") as HTMLDivElement;
@@ -21,15 +21,13 @@ export default function Flags():JSX.Element{
         const image           = document.createElement("IMG") as HTMLImageElement;
 
         error_title.textContent = "Flag not found. Try to spell their name correctly";
-        image.src = "/assets/image/flag-notfound.gif";
+        image.src = "assets/image/flag-notfound.gif";
 
         container_error.classList.add("container-error");
         container_error.appendChild(error_title);
         container_error.appendChild(image);
 
-        if(flags.length == 0){
-            container_flag.appendChild(container_error);
-        }
+        if(flags.length == 0) container_flag.appendChild(container_error);
         else if(container_flag.children[0].classList.contains("container-error")) container_flag.removeChild(container_flag.children[0])
         
     },[flags.length]);
@@ -39,7 +37,7 @@ export default function Flags():JSX.Element{
             {
                 flags.map((flag:any) => (
                     <LazyLoad key={ flag.name }  className="lazyload">
-                        <Link to={`/flag/${flag.alpha3Code}`}  className="flag-link text-color bg-and-shadow" >
+                        <Link to={`/countries-api/${flag.alpha3Code}`}  className="flag-link text-color bg-and-shadow" >
                             <img src={ flag.flag } alt={ flag.name } className="flag-image"/>
                             <div className="flag-info">
                             <h3>{ flag.name }</h3>

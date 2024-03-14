@@ -6,11 +6,11 @@ export default function change_theme():void{
     body.classList.toggle("light");
 
     if(body.classList.contains("light")){
-        icon_moon.setAttribute("src", "/assets/svg/moon-outline.svg");
+        icon_moon.setAttribute("src", "assets/svg/moon-outline.svg");
         theme_mode.textContent = "Dark Mode";
     }
     else {
-        icon_moon.setAttribute("src", "/assets/svg/moon.svg");
+        icon_moon.setAttribute("src", "assets/svg/moon.svg");
         theme_mode.textContent = "Light Mode";
     }
 }

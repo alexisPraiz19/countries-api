@@ -8,7 +8,7 @@ export default function Header():JSX.Element{
             <h1>Where in the World?</h1>
 
             <button onClick={()=> { change_theme() }}>
-                <img src="/assets/svg/moon.svg" alt="moon-icon" id="icon-moon"/>
+                <img src="assets/svg/moon.svg" alt="moon-icon" id="icon-moon"/>
                 <span className="text-color" id="theme_mode">Light Mode</span>
             </button>
         </header>
