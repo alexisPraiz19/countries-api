@@ -1,5 +1,5 @@
 // Lógica TypeScript para alternar <dark mode> <light mode>
-import change_theme from "../types/change_theme";
+import change_theme from "../../types/change_theme";
 
 // Componente principal de exportación
 export default function Header():JSX.Element{

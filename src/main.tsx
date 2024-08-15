@@ -1,13 +1,14 @@
+// React
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-// Estilos SCSS
-import "./scss/index.scss";
 
 // Rutas
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./routes/App.tsx";
 import CountryDetail from "./routes/CountryDetail.tsx";
+
+// Estilos SCSS
+import "./scss/index.scss";
 
 // Contexto
 import RequestData from "./context/RequestData.tsx";

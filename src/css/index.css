@@ -1,0 +1,4 @@
+/* Estilos generales de la página */
+@import "./page_colors";
+@import "./reusable_styles";
+@import "./default";

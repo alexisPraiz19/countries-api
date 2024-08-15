@@ -1,18 +1,15 @@
-// Herramientas React
+// Herramientas React y Contexto
 import { useEffect, useContext } from "react";
-
-// Información de Contexto
-import { RequestDataContext } from "../../context/RequestData"; 
+import { RequestDataContext } from "../../../context/RequestData"; 
 
 // Componentes de React Router
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazy-load";
 
-// Componente principal de exportación
+
 export default function Flags():JSX.Element{
     const { flags, setFlags, setAuxiliaryFlags } = useContext(RequestDataContext) as any;
-
-    useEffect(()=>{ fetch("data.json").then(response => response.json()).then(response => { setFlags(response); setAuxiliaryFlags(response) }) },[]);
+    useEffect(()=>{ fetch("data.json").then(response => response.json()).then(response => { setFlags(response); setAuxiliaryFlags(response) }) }, []);
 
     useEffect(()=>{
         const container_flag  = document.querySelector(".container-flags") as HTMLDivElement;

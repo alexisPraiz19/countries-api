@@ -1,0 +1,33 @@
+.d-flex{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-grid{
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+}
+
+.card-radius{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.text-color{ color: var(--texts-color); }
+
+.bg-and-shadow{
+    background-color: var(--bg-elements-theme);
+    box-shadow: 0 0 15px -10px #0008;
+}
+ 
+button{ 
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+}
