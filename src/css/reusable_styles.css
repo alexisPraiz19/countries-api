@@ -11,7 +11,8 @@
     display: -moz-grid;
 }
 
-.card-radius{
+.padding{ padding-inline: 5%; }
+.radius{
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -19,14 +20,23 @@
     -o-border-radius: 5px;
 }
 
-.text-color{ color: var(--texts-color); }
+.text-color{ 
+    color: var(--texts-color); 
+    letter-spacing: .5px;
+}
 
 .bg-and-shadow{
     background-color: var(--bg-elements-theme);
-    box-shadow: 0 0 15px -10px #0008;
+    box-shadow: 0 0 20px -9px #0008;
+}
+
+.icon-color{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(163deg) brightness(101%) contrast(104%);
+    -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(163deg) brightness(101%) contrast(104%);
 }
  
 button{ 
+    color: var(--texts-color);
     background-color: transparent; 
     border: none; 
     cursor: pointer; 

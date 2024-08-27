@@ -1,0 +1,77 @@
+.hero{
+    height: 36px;
+    margin-top: 40px;
+    justify-content: space-between;
+    
+    /*InputparaFiltrarpaises*/
+    .label-search{
+        width: 350px; height: 100%;
+        padding-inline: 20px;
+        gap: 10px;
+
+        #input-search{
+            width: 100%; height: 100%;
+            color: var(--texts-color);
+            background-color: transparent;
+            border: none;
+            outline: none;
+
+            &::placeholder{ color: currentColor; }
+        }
+    }
+    
+    /* Caja para el listado de Regiones por las que se puede Filtrar paises */
+    .filter-container{
+        position: relative;
+        width: 200px; height: 100%;
+        z-index: 100;
+
+        .open-filter{
+            width: 100%; height: 100%;
+            padding-inline: 16px;
+            justify-content: space-between;
+            font-size: 12px;
+
+            &:active > img{
+                transform: translateY(2px);
+                -webkit-transform: translateY(2px);
+                -moz-transform: translateY(2px);
+                -ms-transform: translateY(2px);
+                -o-transform: translateY(2px);
+            }
+        }
+
+        .filter-options{
+            position: absolute;
+            width: 100%;
+            margin-top: 10px;
+            padding-block: 5px;
+            list-style: none;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            transition: clip-path .1s linear;
+            -webkit-transition: clip-path .1s linear;
+            -moz-transition: clip-path .1s linear;
+            -ms-transition: clip-path .1s linear;
+            -o-transition: clip-path .1s linear;
+
+            li{ 
+                display: flex;
+                display: -webkit-flex;
+                align-items: center;
+                height: 30px;
+                padding-inline: 16px;
+                font-size: 12px;
+                font-weight: 600;
+                cursor: pointer;
+
+                &:hover{ background-color: var(--bg-hover-list); }
+            }
+
+            .region-active{ background-color: var(--bg-hover-list); }
+
+            li:last-child{ &:hover{ background-color: #ff5a5a6d; } }
+        }
+
+        .show-options{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    }
+}

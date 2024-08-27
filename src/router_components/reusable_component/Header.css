@@ -1,0 +1,28 @@
+.header{
+    padding-block: 18px;
+    justify-content: space-between;
+    
+    .title{ font-size: 1.9em; font-weight: 800; }
+
+    .change-theme{
+        justify-content: normal;
+        gap: 5px;
+        font-weight: 500;
+        font-size: 13px;
+        letter-spacing: .5px;
+    }
+}
+
+/* Responsive Mobile */
+@media screen and (width <= 440px){
+    .header{
+        .title{ font-size: 1.4em; }
+
+        .change-theme{ 
+            font-size: 11px;  
+            svg{ width: 12px; height: 12px; }
+        }
+    }
+}
+
+@media screen and (width <= 330px){ .header .title{ font-size: 1.2em; } }

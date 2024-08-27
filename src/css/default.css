@@ -5,11 +5,8 @@
 }
 
 body{
+    font-size: 14px;
     font-family: "Nunito Sans", sans-serif;
     font-weight: 300;
-    transition: background-color .1s linear;
-    -webkit-transition: background-color .1s linear;
-    -moz-transition: background-color .1s linear;
-    -ms-transition: background-color .1s linear;
-    -o-transition: background-color .1s linear;
+    background-color: var(--bg-body-theme);
 }

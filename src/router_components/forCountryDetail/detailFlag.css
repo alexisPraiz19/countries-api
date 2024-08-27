@@ -1,0 +1,90 @@
+@keyframes animate-arrow {
+    to{
+        transform: translateX(-2px);
+        -webkit-transform: translateX(-2px);
+        -moz-transform: translateX(-2px);
+        -ms-transform: translateX(-2px);
+        -o-transform: translateX(-2px);
+}
+};
+
+.detail-flag{
+    margin-bottom: 30px;
+    
+    .btn-go-back{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        width: 100px;
+        height: 34px;
+        margin-block: 50px;
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover > img{
+           animation: animate-arrow .5s linear alternate-reverse infinite;
+           -webkit-animation: animate-arrow .5s linear alternate-reverse infinite;
+        }
+    }
+
+    .detail{
+        grid-template-columns: 0.9fr 1fr;
+        align-items: center;
+
+        .flag-image{
+            width: 90%;
+        }
+
+        .detail-contain{
+            .country-name{ 
+                margin-bottom: 20px;
+                font-size: 1.8em; 
+            }
+
+            .country-info{
+                grid-template-columns: repeat(2, 1fr);
+                margin-bottom: 26px;
+                list-style: none;
+                line-height: 1.7;
+                
+                tr{
+                    justify-content: start;
+                    align-items: start;
+                    flex-direction: column;
+
+                    td{ 
+                        font-weight: 600; 
+                        span{ font-weight: 100; }
+                    }
+                }
+            }
+
+            .border-countries{
+                justify-content: start;
+                gap: 10px;
+
+                .countries{
+                    gap: 8px;
+                    flex-wrap: wrap;
+                    list-style: none;
+                    
+                    li{
+                        font-size: .8em;
+                        border-radius: 3px;
+                        -webkit-border-radius: 3px;
+                        -moz-border-radius: 3px;
+                        -ms-border-radius: 3px;
+                        -o-border-radius: 3px;
+
+                        a{ 
+                            display: inline-block;
+                            padding: 4px 20px;
+                            text-decoration: none; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

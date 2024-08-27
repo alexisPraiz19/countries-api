@@ -1,8 +1,8 @@
-export default function filter_by_type(e:any, auxiliaryFlags:any, setFlags:any):void{
-    const target_value = e.target.value.toLowerCase().trim();
+export default function filter_by_type(e:any, auxFlag:any, setFlags:any):void{
+    const target_value = e.target.value.toLowerCase().trim() as string;
     let counter_null_country = 0 as number;
     
-    const filter = auxiliaryFlags.filter((flag:any)=>{ 
+    const filter = auxFlag.filter((flag:any)=>{ 
         const flag_name   = flag.name.toLowerCase() as string;
         const native_name = flag.nativeName.toLowerCase() as string;
 

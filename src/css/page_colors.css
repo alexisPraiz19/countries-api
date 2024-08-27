@@ -4,7 +4,7 @@
     --bg-elements-theme: hsl(209, 23%, 22%); /* Dark Mode Elements */
     --texts-color: hsl(0, 0%, 100%); /* Dark Mode Text */
     --bg-input-search: hsl(209, 23%, 22%); /* Dark Mode Input */
-    --bg-hover-list: #eee1; /* Dark Mode List */
+    --bg-hover-list: hsla(0, 0%, 93%, 0.067); /* Dark Mode List */
     --hover-flags: #BFFFA5;
     --error-flag-title: #FF5A5A; 
 }
@@ -16,5 +16,10 @@ body.light-theme{
     --bg-input-search: hsl(0, 0%, 52%); /* Light Mode Input */
     --bg-hover-list: #76767611; /* Light Mode List */
     --hover-flags: #88B476;
-    --error-flag-title: #FF9186; 
+    --error-flag-title: #FF9186;
+
+    .icon-color{
+        filter: brightness(0) saturate(100%);
+        -webkit-filter: brightness(0) saturate(100%);
+    }
 }
