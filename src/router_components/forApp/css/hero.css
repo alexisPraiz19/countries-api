@@ -2,8 +2,9 @@
     height: 36px;
     margin-top: 40px;
     justify-content: space-between;
+    gap: 10px;
     
-    /*InputparaFiltrarpaises*/
+    /*Input para Filtrar paises*/
     .label-search{
         width: 350px; height: 100%;
         padding-inline: 20px;
@@ -73,5 +74,20 @@
         }
 
         .show-options{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    }
+}
+
+/* Responsive: 500px (mobile) */
+@media screen and (width <= 500px){
+    .hero{
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        height: auto;
+        margin-top: 35px;
+
+        .label-search{  width: 100%; height: 50px; } /*Input para Filtrar paises*/
+
+        .filter-container{ height: 40px; } /* Caja para el listado de Regiones por las que se puede Filtrar paises */
     }
 }

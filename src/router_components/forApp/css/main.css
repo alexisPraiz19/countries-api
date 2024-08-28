@@ -2,7 +2,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
     grid-auto-columns: 200px;
     width: 100%;
-    margin-top: 40px;
+    margin: 40px 0 20px 0;
     justify-content: normal;
     flex-wrap: wrap;
     column-gap: 30px;
@@ -47,10 +47,23 @@
     
         p{ 
             padding-bottom: 26px; 
-            font-size: 12px;
+            font-size: .9em;
             line-height: 1.5;
 
             span{ font-weight: 600; }
+        }
+    }
+}
+
+/* Responsive: 500px (mobile) */
+@media screen and (width <= 500px){
+    .main{
+        grid-template-columns: .9fr;
+        justify-content: center;
+        margin-top: 40px;
+
+        .flag-link{
+            .flag-image{ height: auto; }
         }
     }
 }
