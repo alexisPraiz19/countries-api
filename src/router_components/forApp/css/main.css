@@ -62,8 +62,6 @@
         justify-content: center;
         margin-top: 40px;
 
-        .flag-link{
-            .flag-image{ height: auto; }
-        }
+        .flag-link .flag-image{ height: auto; } 
     }
 }

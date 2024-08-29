@@ -1,3 +1,11 @@
+/* Fragmento para estilar el "modal" que se hará visible cuando las "opciones de filtrado por región" esté visible */
+body .modal{
+    position: fixed;
+    top: 0;
+    width: 100vw; height: 100vh;
+    background-color: #0007;
+}
+
 .hero{
     height: 36px;
     margin-top: 40px;
