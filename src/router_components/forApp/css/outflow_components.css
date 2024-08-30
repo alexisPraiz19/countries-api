@@ -1,0 +1,45 @@
+/* Estilos para el contenedor que se hará visible en caso que falle la busqueda por escritura */
+.main .un-match-flag{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-items: center;
+    gap: 30px;
+
+    img{
+        width: 408px; height: 230px;
+        object-fit: contain;
+    }
+
+    figcaption{
+        font-size: 1.5em;
+        font-weight: 600;
+        text-wrap: balance;
+        text-align: center;
+        color: var(--error-flag);
+    }
+}
+
+/* Estilos para el contenedor que se hará visible mientras carguen los datos "fetch" del "contexto */
+@keyframes animate-load {
+    from{ transform: rotate(0); }
+    from{ transform: rotate(-360deg); }
+}
+
+.main .loading{
+    position: absolute;
+    left: 50%;
+    bottom: -200px;
+    transform: translateX(-50%);
+    justify-items: center;
+    gap: 20px;
+
+    img{ animation: animate-load .5s linear alternate infinite; }
+
+    figcaption{
+        font-size: 2em;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: var(--loading);
+    }
+}

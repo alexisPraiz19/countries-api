@@ -7,6 +7,7 @@ export default function RequestData({children}:any):JSX.Element{
     const [flags, setFlags] = useState([]);
     const [auxFlag, setAuxFlag] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [unMatch, setUnMatch] = useState(false);
 
     useEffect(()=>{ 
         fetch("data.json")
@@ -16,7 +17,7 @@ export default function RequestData({children}:any):JSX.Element{
     }, []);
     
     return (
-        <RequestDataContext.Provider value={{flags, setFlags, auxFlag, setAuxFlag, loading}}>
+        <RequestDataContext.Provider value={{flags, setFlags, auxFlag, setAuxFlag, loading, unMatch, setUnMatch}}>
             {children}
         </RequestDataContext.Provider>
     );

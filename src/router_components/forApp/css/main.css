@@ -1,40 +1,28 @@
 .main{
-    grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
-    grid-auto-columns: 200px;
+    /* Contenedor Principal */
+    position: relative;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    column-gap: 30px; row-gap: 60px;
     width: 100%;
     margin: 40px 0 20px 0;
-    justify-content: normal;
-    flex-wrap: wrap;
-    column-gap: 30px;
-    row-gap: 60px;
 
+    /* Enlaces "más detalles" de las banderas/paises */
     .flag-link{
         display: inline-block;
-        min-width: 200px;
+        max-width: 204px;
+        margin-inline: auto;
         text-decoration: none;
         overflow: hidden;
         transition: transform .1s linear;
-        -webkit-transition: transform .1s linear;
-        -moz-transition: transform .1s linear;
-        -ms-transition: transform .1s linear;
-        -o-transition: transform .1s linear;
 
         &:hover{
             transform: translateY(-1.5px);
-            -webkit-transform: translateY(-1.5px);
-            -moz-transform: translateY(-1.5px);
-            -ms-transform: translateY(-1.5px);
-            -o-transform: translateY(-1.5px);
-
             color: var(--hover-flags);
         }
 
-        
-
         .flag-image{
             width: 100%; height: 110px;
-            object-fit: cover;
-            aspect-ratio: 101/55;
+            object-fit: fill;
         }
 
         strong, p{ padding-inline: 16px; }
@@ -62,6 +50,9 @@
         justify-content: center;
         margin-top: 40px;
 
-        .flag-link .flag-image{ height: auto; } 
+        .flag-link{
+            max-width: 100%;
+            .flag-image{ height: auto; } 
+        }
     }
 }

@@ -1,22 +1,23 @@
 /* Colores por defecto */
 :root{
-    --bg-body-theme: hsl(207, 26%, 17%); /* Dark Mode Background */
-    --bg-elements-theme: hsl(209, 23%, 22%); /* Dark Mode Elements */
-    --texts-color: hsl(0, 0%, 100%); /* Dark Mode Text */
-    --bg-input-search: hsl(209, 23%, 22%); /* Dark Mode Input */
-    --bg-hover-list: hsla(0, 0%, 93%, 0.067); /* Dark Mode List */
-    --hover-flags: #BFFFA5;
-    --error-flag-title: #FF5A5A; 
+    --bg-body-theme: hsl(207, 26%, 17%);
+    --bg-elements-theme: hsl(209, 23%, 22%);
+    --texts-color: hsl(0, 0%, 100%);
+    --bg-input-search: hsl(208, 23%, 22%);
+    --bg-hover-list: hsla(0, 0%, 93%, 0.067);
+    --hover-flags: hsl(103, 100%, 82%);
+    --error-flag: hsl(0, 100%, 68%);
+    --loading: hsla(103, 100%, 82%, 0.533);
 }
 
 body.light-theme{
-    --bg-body-theme: hsl(0, 0%, 98%); /* Light Mode Background */
-    --bg-elements-theme: hsl(0, 0%, 100%); /* Light Mode Elements */
-    --texts-color: hsl(200, 15%, 8%); /* Light Mode Text */
-    --bg-input-search: hsl(0, 0%, 52%); /* Light Mode Input */
-    --bg-hover-list: #76767611; /* Light Mode List */
-    --hover-flags: #88B476;
-    --error-flag-title: #FF9186;
+    --bg-body-theme: hsl(0, 0%, 98%);
+    --bg-elements-theme: hsl(0, 0%, 100%);
+    --texts-color: hsl(200, 15%, 8%);
+    --bg-input-search: hsl(0, 0%, 52%);
+    --bg-hover-list: #76767611;
+    --hover-flags: hsl(103, 29%, 58%);
+    --error-flag: hsl(5, 100%, 76%);
 
     .icon-color{
         filter: brightness(0) saturate(100%);

@@ -9,4 +9,5 @@
 @import "../router_components/reusable_component/Header";
 @import "../router_components/forApp/css/hero";
 @import "../router_components/forApp/css/main";
+@import "../router_components/forApp/css/outflow_components";
 @import "../router_components/forCountryDetail/detailFlag";

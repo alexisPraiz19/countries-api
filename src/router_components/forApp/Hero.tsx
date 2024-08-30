@@ -10,15 +10,21 @@ import show_modal from "./typescript/show_modal";
 
 export default function Hero():JSX.Element{
     // Consumiendo Contexto para hacer uso del Array con información de las banderas
-    const { auxFlag, setFlags } = useContext(RequestDataContext) as any;
-    function delete_filter(e:any):void{ if(e.target.value != "") setFlags(auxFlag); }
+    const { auxFlag, setFlags, setUnMatch } = useContext(RequestDataContext) as any;
 
     return (
         <section className="hero d-flex padding text-color">
             {/* Input para Filtrar paises */}
             <label htmlFor="input-search" className="label-search d-flex bg-and-shadow radius">
                 <img src="assets/svg/search.svg" alt="icon-search" className="icon-color"/>
-                <input type="search" name="search-country" placeholder="Search for a country..." id="input-search" onClick={delete_filter} onKeyDown={(e)=>{ filter_by_type(e, auxFlag, setFlags) }}/>
+                <input 
+                   type="search" 
+                   name="search-country" 
+                   id="input-search" 
+                   className="input-search" 
+                   onChange={(e)=>{filter_by_type(e, auxFlag, setFlags, setUnMatch)}} 
+                   placeholder="Search for a country..."
+                />
             </label>
             
             {/* Caja para el listado de Regiones por las que se puede Filtrar paises */}

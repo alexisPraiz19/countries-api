@@ -3,12 +3,20 @@ import { useContext } from "react";
 import { RequestDataContext } from "../../context/RequestData";
 import { Link } from "react-router-dom";
 
+// Componentes de complementación
+import UnMatchFlag from "./UnMatchFlag";
+import Loading from "./Loading";
+
 export default function Main():JSX.Element{
-  const { flags, loading } = useContext(RequestDataContext) as any;    
+  const { flags, loading, unMatch } = useContext(RequestDataContext) as any;    
+
   return (
     <main className="main d-grid padding">
-      {loading && <h1 style={{"color": "red"}}>Cargando...</h1>}
-      
+      {/* Componentes que serán visible si hay un error de busqueda o si los datos "fetch" del "contexto" siguen cargando (según se amerite)*/}
+      {loading && <Loading/>}
+      {unMatch && <UnMatchFlag/>}
+
+      {/* Enlaces a "más detalles" de las banderas/paises */}
       {
         flags.map((flag:any) =>(
           <Link to={`/countries-api/${flag.alpha3Code}`}  className="flag-link text-color bg-and-shadow radius">
@@ -26,5 +34,3 @@ export default function Main():JSX.Element{
     </main>
   );
 }
-
-/* */

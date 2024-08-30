@@ -1,3 +1,9 @@
+/* Animación que se mostrará cuando no se encuentre el "flag" tipado */
+@keyframes animate-shadow-input {
+    from{box-shadow: 0 0 3px #0000; }
+    to{box-shadow: 0 0 3px var(--error-flag);}
+}
+
 /* Fragmento para estilar el "modal" que se hará visible cuando las "opciones de filtrado por región" esté visible */
 body .modal{
     position: fixed;
@@ -7,6 +13,7 @@ body .modal{
 }
 
 .hero{
+    /* Contenedor principal  */
     height: 36px;
     margin-top: 40px;
     justify-content: space-between;
@@ -28,6 +35,7 @@ body .modal{
             &::placeholder{ color: currentColor; }
         }
     }
+    .error-flag{ animation: animate-shadow-input .8s linear alternate-reverse infinite; }
     
     /* Caja para el listado de Regiones por las que se puede Filtrar paises */
     .filter-container{
@@ -41,13 +49,7 @@ body .modal{
             justify-content: space-between;
             font-size: 12px;
 
-            &:active > img{
-                transform: translateY(2px);
-                -webkit-transform: translateY(2px);
-                -moz-transform: translateY(2px);
-                -ms-transform: translateY(2px);
-                -o-transform: translateY(2px);
-            }
+            &:active > img{ transform: translateY(2px)}
         }
 
         .filter-options{
@@ -58,10 +60,6 @@ body .modal{
             list-style: none;
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             transition: clip-path .1s linear;
-            -webkit-transition: clip-path .1s linear;
-            -moz-transition: clip-path .1s linear;
-            -ms-transition: clip-path .1s linear;
-            -o-transition: clip-path .1s linear;
 
             li{ 
                 display: flex;
