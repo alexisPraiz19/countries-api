@@ -19,7 +19,7 @@ export default function Main():JSX.Element{
       {/* Enlaces a "más detalles" de las banderas/paises */}
       {
         flags.map((flag:any) =>(
-          <Link key={flag.name} to={`/countries-api/${flag.alpha3Code}`}  className="flag-link text-color bg-and-shadow radius">
+          <Link key={flag.name} to={`/${flag.alpha3Code}`}  className="flag-link text-color bg-and-shadow radius">
             <img src={ flag.flag } alt={ flag.name } title={ flag.name } className="flag-image"/>
             
             <strong>{ flag.name }</strong>

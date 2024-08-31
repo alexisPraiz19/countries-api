@@ -9,11 +9,10 @@ export default function DetailFlagContainer():JSX.Element{
     const { flagname }  = useParams() as any;
     const {flag, name, nativeName, population, region, subregion, capital, topLevelDomain, currencies, languages, borders} = auxFlag.find((flag:any) => flag.alpha3Code === flagname) as any;
     const border_countries = borders ? borders : [] as any;
-    
     return (
         <section className="detail-flag padding text-color">
-            <Link to="/countries-api/" className="btn-go-back text-color bg-and-shadow radius">
-              <img src="/assets/svg/arrow-left-long.svg" alt="icon-arrow-left" className="icon-color"/>
+            <Link to="/" className="btn-go-back text-color bg-and-shadow radius">
+              <img src="assets/svg/arrow-left-long.svg" alt="icon-arrow-left" className="icon-color"/>
                Back
             </Link>
 
@@ -35,7 +34,7 @@ export default function DetailFlagContainer():JSX.Element{
                         <tr className="d-flex">
                             <td>Top Level Domain: <span>{ topLevelDomain[0] }</span></td>
                             <td>Currencies: <span>{currencies[0].name}, {currencies[0].code}, {currencies[0].symbol}</span></td>
-                            <td>Languages: <span>{languages.map((language:any)=>{ return `${language.name}, ${language.nativeName}, ` })}</span></td>
+                            <td>Languages: <span>{languages.map((language:any)=>{return `${language.name}, ${language.nativeName}, `})}</span></td>
                         </tr>
                     </table>
 
@@ -48,7 +47,7 @@ export default function DetailFlagContainer():JSX.Element{
                             <ul className="countries d-flex">
                                 { border_countries.map((country:any)=>( 
                                 <li className="bg-and-shadow">
-                                   <Link key={ country } to={`/countries-api/${country}`} className="link-to-country text-color"> {country} </Link>
+                                   <Link key={ country } to={`/${country}`} className="link-to-country text-color"> {country} </Link>
                                 </li>
                                 ))}
                             </ul>
