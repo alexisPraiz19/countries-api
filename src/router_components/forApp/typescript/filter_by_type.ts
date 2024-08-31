@@ -1,4 +1,4 @@
-export default function filter_by_type(e:any, auxFlag:[{}], setFlags:any, setUnmatch:any):void{
+export default function filter_by_type(e:any, auxFlag:[{}], setFlags:any, setUnmatch:any, setType:any):void{
     const target_value   = e.target.value.toLowerCase().trim() as string;
     const open_filter = document.querySelector(".open-filter") as HTMLButtonElement;
 
@@ -15,6 +15,7 @@ export default function filter_by_type(e:any, auxFlag:[{}], setFlags:any, setUnm
         open_filter.style.cursor = "not-allowed";
     }else{
         setFlags(filter) & setUnmatch(false) & e.target.parentElement.classList.remove("error-flag");
+        setType(target_value);
         open_filter.removeAttribute("disabled");
         open_filter.style.cursor = "pointer";
     }

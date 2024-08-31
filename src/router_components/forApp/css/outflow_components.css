@@ -1,5 +1,5 @@
 /* Estilos para el contenedor que se hará visible en caso que falle la busqueda por escritura */
-.main .un-match-flag{
+.main .unmatch-flag{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -39,7 +39,24 @@
     figcaption{
         font-size: 2em;
         font-weight: 600;
+        text-wrap: balance;
         letter-spacing: 2px;
         color: var(--loading);
     }
 }
+
+/* Responsive: Mobile */
+@media screen and (width <= 500px){
+    .main .unmatch-flag{
+        width: 90%;
+        gap: 10px;
+
+        img{ width: 100%; }
+        figcaption{
+           font-size: 1.3em;
+           margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (width <= 320px){ .main .unmatch-flag figcaption{ font-size: 1.1em; } }

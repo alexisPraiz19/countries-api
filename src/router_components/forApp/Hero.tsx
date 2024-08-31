@@ -10,7 +10,7 @@ import show_modal from "./typescript/show_modal";
 
 export default function Hero():JSX.Element{
     // Consumiendo Contexto para hacer uso del Array con información de las banderas
-    const { auxFlag, setFlags, setUnMatch } = useContext(RequestDataContext) as any;
+    const { auxFlag, setFlags, setUnMatch, type, setType, filterRegion, setFilterRegion } = useContext(RequestDataContext) as any;
 
     return (
         <section className="hero d-flex padding text-color">
@@ -22,19 +22,19 @@ export default function Hero():JSX.Element{
                    name="search-country" 
                    id="input-search" 
                    className="input-search" 
-                   onChange={(e)=>{filter_by_type(e, auxFlag, setFlags, setUnMatch)}} 
-                   placeholder="Search for a country..."
+                   onChange={(e)=>{filter_by_type(e, auxFlag, setFlags, setUnMatch, setType)}} 
+                   placeholder="Search for a country..." value={type}
                 />
             </label>
             
             {/* Caja para el listado de Regiones por las que se puede Filtrar paises */}
             <div className="filter-container text-color bg-and-shadow radius">
                 <button className="open-filter d-flex text-color" onClick={ show_modal }> 
-                    Filter by Region
+                    Filter by Region {filterRegion != "" ? <span>({filterRegion})</span> : ""}
                     <img src="assets/svg/arrow-down.svg" alt="icon-arrow" className="icon-color"/>
                 </button>
                 
-                <ul className="filter-options bg-and-shadow radius" id="filter-options" onClick={(e)=>{filter_by_region(e, auxFlag, setFlags)}}>
+                <ul className="filter-options bg-and-shadow radius" id="filter-options" onClick={(e)=>{filter_by_region(e, auxFlag, setFlags, setType, setFilterRegion)}}>
                     <li data-region="Africa">Africa</li>
                     <li data-region="Americas">America</li>
                     <li data-region="Asia">Asia</li>

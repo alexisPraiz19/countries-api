@@ -48,7 +48,6 @@
     .main{
         grid-template-columns: .9fr;
         justify-content: center;
-        margin-top: 40px;
 
         .flag-link{
             max-width: 100%;
