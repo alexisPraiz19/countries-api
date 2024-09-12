@@ -34,7 +34,7 @@
     justify-items: center;
     gap: 20px;
 
-    img{ animation: animate-load .5s linear alternate infinite; }
+    img{ animation: animate-load .5s linear infinite }
 
     figcaption{
         font-size: 2em;
